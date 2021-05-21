@@ -2,6 +2,7 @@ import './index.css'
 import React, { useEffect, useState } from 'react';
 import RecipeTitle from './RecipeTitle'
 import IngredientList from './IngredientList'
+import PreparedList from './PreparedList'
 
 function App() {
     const initialRecipe = {
@@ -43,7 +44,7 @@ function App() {
             {/* TODO: Pass ingredients and event listener to IngredientList */}
             <IngredientList ingredients={recipe.ingredients} onClick={ ingredientClick } />
             {/* TODO: Add the prep work display */}
-            { prepared ? <h2>Prep work done!</h2> : <h2>Just keep chopping.</h2>}
+            <PreparedList prepare={ prepared } />
         </article>
     )
 }
